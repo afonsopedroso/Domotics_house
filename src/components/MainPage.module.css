@@ -3,6 +3,7 @@
   flex-direction: column;
   height: 100vh;
   background: linear-gradient(rgb(170 226 236 / 53%), rgb(15 97 205 / 80%));
+  z-index: 0;
 }
 
 .wrapper {
