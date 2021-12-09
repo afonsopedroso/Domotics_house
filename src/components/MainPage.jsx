@@ -8,12 +8,14 @@ function MainPage() {
 
   const config = useSelector(state => state.Config.configs)
   const dispatch = useDispatch();
+  const[button,setButton]=useState("")
   
   
   function handleClick(e){
     e.preventDefault();
+    setButton(e.target.id)    
     dispatch(setConfig())
-    console.log(e.target.id)
+    
   }
   
   return (
@@ -32,7 +34,12 @@ function MainPage() {
         <button id="btn5" onClick={handleClick}>room 5</button>
         <button id="btn6" onClick={handleClick}>room 6</button>
       </div> 
-      {config ? <Configs /> : null}
+      {config && button==="btn1"? <Configs room ="kitchen" /> : null}
+      {config && button==="btn2"? <Configs room="livingRoom" /> : null}
+      {config && button==="btn3"? <Configs room="bedroom" /> : null}
+      {config && button==="btn4"? <Configs room="bedroom2" /> : null}
+      {config && button==="btn5"? <Configs room="wc"/> : null}
+      {config && button==="btn6"? <Configs room="balcony" /> : null}
     </div>
     
     </div>

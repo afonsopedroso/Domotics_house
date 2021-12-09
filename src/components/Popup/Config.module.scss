@@ -111,11 +111,13 @@ html {
 
 .rangeBarT {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  margin-top: 3vh;
 }
 
 .rangeBar {
   display: flex;
+  padding-bottom:40px;
 }
 .counter {
   display: flex;
